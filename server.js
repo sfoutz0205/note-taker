@@ -4,7 +4,7 @@ const fs = require('fs');
 const savedNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
 
 const app = express();
-const PORT = 3002;
+const PORT = process.env.PORT || 3002;
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
@@ -19,7 +19,7 @@ app.get('/api/notes', (req, res) => {
 });
 
 app.get('api/notes/:id', (req, res) => {
-  // let savedNotes = JSON.parse(fs.readFileSymc(""))
+  // let savedNotes = JSON.parse(fs.readFileSync(""))
   res.json(savedNotes[Number(req.params.id)]);
 });
 
@@ -39,23 +39,23 @@ app.post('/api/notes', (req, res) => {
   res.json(savedNotes);
 });
 
-app.delete('api/notes/:id', (req, res) => {
-  // let savedNotes = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
-  let noteId = req.params.id;
-  let newId = 0;
-  console.log(`Deleting note with ID ${noteId}`);
-  savedNotes = savedNotes.filter(currentNote => {
-    return currentNote.id != noteId;
+app.delete("/api/notes/:id", function(req, res) {
+  let savedNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
+  let noteID = req.params.id;
+  let newID = 0;
+  
+  savedNotes = savedNotes.filter(currNote => {
+      return currNote.id != noteID;
   })
-
-  for (currentNote of savedNotes) {
-    currentNote.id = newId.toString();
-    newId++;
+  
+  for (currNote of savedNotes) {
+      currNote.id = newID.toString();
+      newID++;
   }
 
-  fs.writeFileSync('./db/db.json', JSON.stringify(savedNotes));
+  fs.writeFileSync("./db/db.json", JSON.stringify(savedNotes));
   res.json(savedNotes);
-});
+})
 
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}!`);
