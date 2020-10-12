@@ -1,6 +1,6 @@
 # Note-Taker #
 
-Note-Taker an application that allows you to write and save notes with a title and plain text description, and delete notes as they become irrelevant.
+Note-Taker is an application that allows you to write and save notes with a title and plain text description, and delete notes as they become irrelevant.
 
 ## Creation ## 
 
