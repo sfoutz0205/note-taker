@@ -5,9 +5,9 @@ Note-Taker an application that allows you to write and save notes with a title a
 ## Creation ## 
 
 ### Created  Using ###
-*HTML
-*CSS
-*JavaScript
+* HTML
+* CSS
+* JavaScript
   - Node.js
     - Express.js
 
@@ -26,9 +26,9 @@ https://sfoutz-note-taker.herokuapp.com/
 
 ## Instructions ##
 
-*From the landing page, click the 'Get Started' button to navigate to the notes page. 
-*A blank note template is automatically displayed, allowing you to click and input a title, as well as a note description, then click the 'save' icon on the right side of the navigation bar. 
-*You will also see any previously saved notes listed on the left side and can click to enlarge any specific note for easy viewing. From here, to add a new note simply click the 'write' icon in the top right corner of the navigation bar.
+* From the landing page, click the 'Get Started' button to navigate to the notes page. 
+* A blank note template is automatically displayed, allowing you to click and input a title, as well as a note description, then click the 'save' icon on the right side of the navigation bar. 
+* You will also see any previously saved notes listed on the left side and can click to enlarge any specific note for easy viewing. From here, to add a new note simply click the 'write' icon in the top right corner of the navigation bar.
 
 There you have it! As simply as that you are able to keep and re-visit a list of notes. 
 
