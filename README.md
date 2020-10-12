@@ -8,8 +8,7 @@ Note-Taker an application that allows you to write and save notes with a title a
 * HTML
 * CSS
 * JavaScript
-  - Node.js
-    - Express.js
+  - Express.js
 
 This application uses an Express.js back end and saves and retrieves note data from a JSON file. It was my responsibility to build this back end and connect it to a pre-existing front end. 
 
